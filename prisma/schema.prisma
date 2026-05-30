@@ -1,0 +1,251 @@
+// prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// ─── AUTH ───────────────────────────────────────────────
+
+model Role {
+  id    String   @id @default(cuid())
+  name  String   @unique
+  flags String[] // Array von Flag-Strings
+
+  users User[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model User {
+  id       String   @id @default(cuid())
+  name     String
+  email    String   @unique
+  password String
+  flags    String[] // Individuelle Flags (ergänzen/überschreiben Rolle)
+  active   Boolean  @default(true)
+
+  roleId String?
+  role   Role?   @relation(fields: [roleId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// ─── CRM ────────────────────────────────────────────────
+
+model Contact {
+  id       String  @id @default(cuid())
+  name     String
+  company  String?
+  email    String  @unique
+  phone    String?
+  notes    String? @db.Text
+  status   String  @default("new") // new, contacted, replied, converted, unsubscribed
+  optOut   Boolean @default(false)
+  optOutAt DateTime?
+
+  sequenceRuns SequenceRun[]
+  emailLogs    EmailLog[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// ─── SEQUENCES ──────────────────────────────────────────
+
+model Sequence {
+  id          String  @id @default(cuid())
+  name        String
+  description String? @db.Text
+  active      Boolean @default(true)
+
+  steps SequenceStep[]
+  runs  SequenceRun[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model SequenceStep {
+  id         String @id @default(cuid())
+  sequenceId String
+  sequence   Sequence @relation(fields: [sequenceId], references: [id], onDelete: Cascade)
+
+  dayOffset  Int    // Tag X nach Start
+  subject    String
+  body       String @db.LongText // Template mit {{name}}, {{unternehmen}} etc.
+  order      Int
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model SequenceRun {
+  id         String   @id @default(cuid())
+  contactId  String
+  contact    Contact  @relation(fields: [contactId], references: [id], onDelete: Cascade)
+  sequenceId String
+  sequence   Sequence @relation(fields: [sequenceId], references: [id], onDelete: Cascade)
+
+  status      String   @default("active") // active, paused, completed, unsubscribed
+  currentStep Int      @default(0)
+  startedAt   DateTime @default(now())
+  pausedAt    DateTime?
+  pauseReason String?  // z.B. "replied"
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([contactId, sequenceId])
+}
+
+// ─── EMAIL LOGS & TRACKING ──────────────────────────────
+
+model EmailLog {
+  id        String   @id @default(cuid())
+  contactId String?
+  contact   Contact? @relation(fields: [contactId], references: [id], onDelete: SetNull)
+
+  to          String
+  subject     String
+  body        String  @db.LongText
+  type        String  // sequence, newsletter, manual, contact_form
+  trackingToken String @unique @default(cuid())
+
+  sentAt      DateTime @default(now())
+  delivered   Boolean  @default(false)
+  deliveredAt DateTime?
+  opened      Boolean  @default(false)
+  openedAt    DateTime?
+  openCount   Int      @default(0)
+
+  clicks EmailClick[]
+
+  createdAt DateTime @default(now())
+}
+
+model EmailClick {
+  id       String   @id @default(cuid())
+  logId    String
+  log      EmailLog @relation(fields: [logId], references: [id], onDelete: Cascade)
+
+  token       String   @unique @default(cuid())
+  originalUrl String
+  clickedAt   DateTime?
+  clickCount  Int      @default(0)
+
+  createdAt DateTime @default(now())
+}
+
+// ─── NEWSLETTER ─────────────────────────────────────────
+
+model NewsletterSubscriber {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  optIn     Boolean  @default(false)
+  optInAt   DateTime?
+  optOutAt  DateTime?
+  active    Boolean  @default(true)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model NewsletterMail {
+  id        String   @id @default(cuid())
+  subject   String
+  body      String   @db.LongText
+  sentAt    DateTime?
+  status    String   @default("draft") // draft, sending, sent
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// ─── BLOG ───────────────────────────────────────────────
+
+model BlogCategory {
+  id   String @id @default(cuid())
+  name String
+  slug String @unique
+
+  posts BlogPost[]
+
+  createdAt DateTime @default(now())
+}
+
+model BlogTag {
+  id   String @id @default(cuid())
+  name String
+  slug String @unique
+
+  posts BlogPost[]
+
+  createdAt DateTime @default(now())
+}
+
+model BlogPost {
+  id         String  @id @default(cuid())
+  title      String
+  slug       String  @unique
+  excerpt    String? @db.Text
+  body       String  @db.LongText
+  coverImage String?
+  published  Boolean @default(false)
+  lang       String  @default("de") // de, en
+
+  categoryId String?
+  category   BlogCategory? @relation(fields: [categoryId], references: [id], onDelete: SetNull)
+  tags       BlogTag[]
+
+  publishedAt DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// ─── GALLERY ────────────────────────────────────────────
+
+model GalleryItem {
+  id          String  @id @default(cuid())
+  title       String
+  description String? @db.Text
+  image       String?
+  sector      String?
+  result      String?
+  tag         String?
+  order       Int     @default(0)
+  published   Boolean @default(true)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// ─── INQUIRIES ──────────────────────────────────────────
+
+model Inquiry {
+  id      String  @id @default(cuid())
+  name    String
+  company String?
+  email   String
+  message String? @db.Text
+  read    Boolean @default(false)
+  readAt  DateTime?
+
+  createdAt DateTime @default(now())
+}
+
+// ─── SETTINGS ───────────────────────────────────────────
+
+model Setting {
+  key       String   @id
+  value     String   @db.Text
+  updatedAt DateTime @updatedAt
+}
