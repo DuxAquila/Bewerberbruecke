@@ -48,19 +48,17 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  // Alle Messages für diesen Locale laden
   const messages = await getMessages();
 
   return (
     <html lang={locale} className={`${playfair.variable} ${dmSans.variable}`}>
       <body>
         <NextIntlClientProvider messages={messages}>
-          <Navbar />
+          <Navbar locale={locale} />
           <main>{children}</main>
-          <Footer />
+          <Footer locale={locale} />
         </NextIntlClientProvider>
       </body>
     </html>
   );
 }
-
