@@ -7,15 +7,14 @@ generator client {
 
 datasource db {
   provider = "mysql"
-  url      = env("DATABASE_URL")
 }
 
 // ─── AUTH ───────────────────────────────────────────────
 
 model Role {
-  id    String   @id @default(cuid())
-  name  String   @unique
-  flags String[] // Array von Flag-Strings
+  id    String @id @default(cuid())
+  name  String @unique
+  flags Json   @default("[]")
 
   users User[]
 
@@ -24,12 +23,12 @@ model Role {
 }
 
 model User {
-  id       String   @id @default(cuid())
+  id       String  @id @default(cuid())
   name     String
-  email    String   @unique
+  email    String  @unique
   password String
-  flags    String[] // Individuelle Flags (ergänzen/überschreiben Rolle)
-  active   Boolean  @default(true)
+  flags    Json    @default("[]")
+  active   Boolean @default(true)
 
   roleId String?
   role   Role?   @relation(fields: [roleId], references: [id])
