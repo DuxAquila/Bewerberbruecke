@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "title": "References – Bewerberbrücke",
+    "description": "Case studies and results from completed projects."
+  },
+  "hero": {
+    "label": "References",
+    "title": "Case Studies & Results",
+    "subtitle": "Insights into completed projects and the results they produced."
+  },
+  "cases": [
+    {
+      "client": "Care Facility Rhine-Main",
+      "sector": "Elderly care",
+      "result": "+14 applications in 6 weeks",
+      "detail": "Before: No digital presence, barely any applications. After: Clearer positioning, social media setup and targeted campaign strategy brought predictable application volumes.",
+      "tag": "Social Recruiting"
+    },
+    {
+      "client": "Social Station Central Hesse",
+      "sector": "Outpatient care",
+      "result": "Regional visibility established",
+      "detail": "Local employer brand strengthened, professional external image established and recruiting process structured. Result: Higher quality of applications.",
+      "tag": "Employer Branding"
+    },
+    {
+      "client": "Care Facility North",
+      "sector": "Disability support",
+      "result": "Staff recruitment made more predictable",
+      "detail": "Through clear messaging and a consistent content strategy, open positions could be filled faster. Built an independent recruiting system.",
+      "tag": "Growth System"
+    }
+  ],
+  "cta": {
+    "title": "Similar results for your organisation?",
+    "text": "Let us check in a short intro call which levers really work for you."
+  }
+}

@@ -1,0 +1,41 @@
+/* ============================================================
+   BASE – Reset & globale Basis-Styles
+   Fonts werden über next/font in layout.tsx geladen (lokal, DSGVO-konform).
+   CSS-Variablen --font-serif und --font-sans werden dort gesetzt.
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:              var(--bg);
+  color:                   var(--primary);
+  font-family:             var(--font-sans);
+  font-weight:             400;
+  line-height:             1.6;
+  -webkit-font-smoothing:  antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family:  var(--font-serif);
+  line-height:  1.2;
+}
+
+a {
+  color: inherit;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}

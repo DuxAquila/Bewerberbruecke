@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "title": "Über uns – Bewerberbrücke",
+    "description": "Wer hinter der Bewerberbrücke steht und was uns antreibt."
+  },
+  "hero": {
+    "label": "Über uns",
+    "title": "Wer hinter der Bewerberbrücke steht"
+  },
+  "intro": {
+    "title": "Wir lösen ein strukturelles Problem.",
+    "p1": "Viele Unternehmen im Bereich Pflege und Soziales kämpfen nicht mit einem Bewerber-Problem – sie kämpfen mit einem Sichtbarkeitsproblem. Sie werden schlicht nicht gefunden. Oder sie werden gefunden, wirken aber nicht überzeugend genug, um ins Gespräch zu kommen.",
+    "p2": "Genau hier setzen wir an. Wir entwickeln keine losen Maßnahmen, sondern ein digitales Wachstumssystem, das Sichtbarkeit, Außenwirkung und Mitarbeitergewinnung planbarer macht.",
+    "p3": "Unser Ansatz ist systemisch, nicht aktionistisch. Wir starten nicht mit einer Kampagne – wir starten mit einer klaren Einordnung."
+  },
+  "values": {
+    "heading": "Unsere Werte",
+    "items": [
+      {
+        "title": "Klarheit vor Aktionismus",
+        "text": "Wir analysieren zuerst – und handeln dann zielgerichtet."
+      },
+      {
+        "title": "Struktur vor Einzelmaßnahmen",
+        "text": "Nachhaltigkeit entsteht durch Systeme, nicht durch Einzelaktionen."
+      },
+      {
+        "title": "Ehrlichkeit vor Versprechen",
+        "text": "Wir sagen, was realistisch ist – keine leeren Versprechungen."
+      },
+      {
+        "title": "Wirkung vor Optik",
+        "text": "Schöne Maßnahmen, die nichts bringen, nützen niemandem."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Lernen Sie uns kennen.",
+    "text": "Im Erstgespräch erfahren Sie schnell, ob und wie wir sinnvoll unterstützen können."
+  }
+}

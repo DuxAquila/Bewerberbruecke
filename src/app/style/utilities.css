@@ -1,0 +1,41 @@
+/* ============================================================
+   UTILITIES – Einzel-Hilfsklassen
+   ============================================================ */
+
+/* ---- Text ---- */
+.text-center  { text-align: center; }
+.text-muted   { color: var(--muted); }
+.text-accent  { color: var(--accent); }
+.text-white   { color: var(--white); }
+
+.text-label {
+  font-size:      0.75rem;
+  letter-spacing: 0.14em;
+  color:          var(--accent);
+  text-transform: uppercase;
+  font-weight:    600;
+}
+
+.font-serif { font-family: var(--font-serif); }
+
+/* ---- Abstände ---- */
+.mt-sm  { margin-top:    var(--gap-sm); }
+.mt-md  { margin-top:    var(--gap-md); }
+.mt-lg  { margin-top:    var(--gap-lg); }
+.mb-sm  { margin-bottom: var(--gap-sm); }
+.mb-md  { margin-bottom: var(--gap-md); }
+.mb-lg  { margin-bottom: var(--gap-lg); }
+
+/* ---- Breiten-Begrenzer ---- */
+.max-w-sm  { max-width: 560px;  margin-left: auto; margin-right: auto; }
+.max-w-md  { max-width: 760px;  margin-left: auto; margin-right: auto; }
+.max-w-lg  { max-width: 960px;  margin-left: auto; margin-right: auto; }
+.max-w-xl  { max-width: 1000px; margin-left: auto; margin-right: auto; }
+
+/* ---- Flexbox ---- */
+.flex         { display: flex; }
+.flex-center  { display: flex; align-items: center; justify-content: center; }
+.flex-between { display: flex; align-items: center; justify-content: space-between; }
+.flex-wrap    { flex-wrap: wrap; }
+.gap-sm       { gap: var(--gap-sm); }
+.gap-md       { gap: var(--gap-md); }

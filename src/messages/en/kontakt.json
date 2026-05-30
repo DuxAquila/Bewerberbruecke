@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "title": "Contact – Bewerberbrücke",
+    "description": "Request an intro call and find out how we can help your organisation grow."
+  },
+  "hero": {
+    "label": "Contact",
+    "title": "Request intro call",
+    "subtitle": "If you want to find out where the potential of visibility, external image or staff recruitment in your organisation is still untapped – let's start with a short, free intro call."
+  },
+  "sidebar": {
+    "title": "How to reach us",
+    "channels": [
+      { "label": "Email", "value": "info@bewerberbruecke.com", "href": "mailto:info@bewerberbruecke.com" },
+      { "label": "Phone", "value": "06403 / 9179483", "href": "tel:064039179483" },
+      { "label": "WhatsApp", "value": "+49 157 56039148", "href": "https://wa.me/+4915756039148" }
+    ],
+    "nextSteps": {
+      "title": "What happens next?",
+      "steps": [
+        "We get back to you within 24h",
+        "Short intro call (~20 min.)",
+        "Assessment of your current situation",
+        "Decision on the right next steps"
+      ]
+    }
+  },
+  "form": {
+    "nameLabel": "Name *",
+    "namePlaceholder": "Jane Doe",
+    "companyLabel": "Company",
+    "companyPlaceholder": "Example Ltd.",
+    "emailLabel": "Email address *",
+    "emailPlaceholder": "jane@example.com",
+    "messageLabel": "Brief description of your goal",
+    "messagePlaceholder": "What is your current goal? Where are the biggest challenges?",
+    "submit": "Send request",
+    "sending": "Sending…",
+    "privacy": "By submitting you agree that we may process your data to handle your enquiry.",
+    "successTitle": "Thank you for your enquiry!",
+    "successText": "We will get back to you within 24 hours.",
+    "errorText": "An error occurred while sending. Please try again or contact us directly by email."
+  }
+}

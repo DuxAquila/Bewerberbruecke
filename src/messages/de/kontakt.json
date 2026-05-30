@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "title": "Kontakt – Bewerberbrücke",
+    "description": "Erstgespräch anfragen und herausfinden, wie wir Ihr Unternehmen voranbringen können."
+  },
+  "hero": {
+    "label": "Kontakt",
+    "title": "Erstgespräch anfragen",
+    "subtitle": "Wenn Sie herausfinden möchten, wo das Potential von Sichtbarkeit, Außenwirkung oder Mitarbeitergewinnung in Ihrem Unternehmen noch ausbaufähig ist – starten wir mit einem kurzen, kostenfreien Erstgespräch."
+  },
+  "sidebar": {
+    "title": "So erreichen Sie uns",
+    "channels": [
+      { "label": "E-Mail", "value": "info@bewerberbruecke.com", "href": "mailto:info@bewerberbruecke.com" },
+      { "label": "Telefon", "value": "06403 / 9179483", "href": "tel:064039179483" },
+      { "label": "WhatsApp", "value": "+49 157 56039148", "href": "https://wa.me/+4915756039148" }
+    ],
+    "nextSteps": {
+      "title": "Was passiert danach?",
+      "steps": [
+        "Wir melden uns innerhalb von 24h",
+        "Kurzes Erstgespräch (~20 Min.)",
+        "Einordnung Ihrer Ausgangslage",
+        "Entscheidung über sinnvolle nächste Schritte"
+      ]
+    }
+  },
+  "form": {
+    "namePlaceholder": "Max Mustermann",
+    "nameLabel": "Name *",
+    "companyLabel": "Unternehmen",
+    "companyPlaceholder": "Muster GmbH",
+    "emailLabel": "E-Mail-Adresse *",
+    "emailPlaceholder": "max@muster.de",
+    "messageLabel": "Kurze Beschreibung des Wunschziels",
+    "messagePlaceholder": "Was ist Ihr aktuelles Ziel? Wo liegen die größten Herausforderungen?",
+    "submit": "Anfrage absenden",
+    "sending": "Wird gesendet…",
+    "privacy": "Mit dem Absenden stimmen Sie zu, dass wir Ihre Angaben zur Bearbeitung Ihrer Anfrage verarbeiten.",
+    "successTitle": "Vielen Dank für Ihre Anfrage!",
+    "successText": "Wir melden uns innerhalb von 24 Stunden bei Ihnen.",
+    "errorText": "Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder melden Sie sich direkt per E-Mail."
+  }
+}

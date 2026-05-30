@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "title": "Bewerberbrücke – Social Recruiting für Pflege & Soziales",
+    "description": "Planbare Sichtbarkeit und Mitarbeitergewinnung. Wir bauen Ihnen die Maschine, die Bewerber für Sie generiert."
+  },
+  "hero": {
+    "badge": "Social Recruiting · Pflege & Soziales",
+    "title": "Planbare Sichtbarkeit",
+    "titleAccent": "und Mitarbeitergewinnung.",
+    "subtitle": "Wir helfen Unternehmen dabei, nach außen klarer aufzutreten, sichtbar zu werden und die Mitarbeitergewinnung endlich planbarer zu machen.",
+    "claim": "Wir vermitteln keine Bewerber. Wir bauen Ihnen die Maschine, die Bewerber für Sie generiert."
+  },
+  "intro": {
+    "title": "Unsere 4 Phasen für planbare Sichtbarkeit und Mitarbeitergewinnung",
+    "text": "Viele Unternehmen machen schon etwas für ihre Sichtbarkeit, ihre Website oder ihre Mitarbeitergewinnung. Das Problem ist nur, dass oft nichts davon wirklich effizient ineinander greift. Genau deshalb arbeiten wir nicht mit losen Einzelleistungen, sondern mit einem klaren System."
+  },
+  "phases": [
+    {
+      "num": "01",
+      "title": "Klarer Auftritt",
+      "text": "Menschen müssen schnell verstehen, wofür ein Unternehmen steht, warum es relevant ist und warum man sich dieses Unternehmen merken sollte. Genau das entscheidet darüber, ob Sichtbarkeit überhaupt Wirkung entfalten kann."
+    },
+    {
+      "num": "02",
+      "title": "Relevante Sichtbarkeit",
+      "text": "Social Media, Website, Bildsprache und Inhalte sollen nicht einfach nur da sein – sie sollen dafür sorgen, dass ein Unternehmen klarer wahrgenommen wird, professioneller wirkt und im Kopf bleibt."
+    },
+    {
+      "num": "03",
+      "title": "Planbarere Ergebnisse",
+      "text": "Am Ende geht es nicht um schöne Maßnahmen, sondern darum, dass daraus planbarere Anfragen, Bewerbungen und echte nächste Schritte entstehen. Genau daran scheitert es oft, wenn Struktur fehlt."
+    },
+    {
+      "num": "04",
+      "title": "Systemaufbau",
+      "text": "Auf dieser Basis entsteht eine klare Struktur, in der die richtigen Bausteine an der richtigen Stelle zusammenspielen. Von Sichtbarkeit und Website bis hin zu Anfragen, Bewerbungen und sauberer Weiterführung."
+    }
+  ],
+  "process": {
+    "label": "Ablauf",
+    "title": "So läuft die Zusammenarbeit ab",
+    "steps": [
+      {
+        "title": "Erstgespräch",
+        "text": "Im ersten Schritt schauen wir uns gemeinsam an, wo Sie aktuell stehen, was schon da ist und wo es gerade hakt. So wird schnell klar, ob und wie wir sinnvoll unterstützen können."
+      },
+      {
+        "title": "Wachstumsanalyse",
+        "text": "Danach gehen wir tiefer rein. Wir analysieren Sichtbarkeit, Außenwirkung und Mitarbeitergewinnung, machen Engpässe sichtbar und leiten die sinnvollsten Hebel für die nächsten Schritte ab."
+      },
+      {
+        "title": "Systemaufbau",
+        "text": "Auf dieser Basis entsteht eine klare Struktur, in der die richtigen Bausteine an der richtigen Stelle zusammenspielen – skalierbar und auf Ihr Unternehmen zugeschnitten."
+      }
+    ]
+  },
+  "ctaBanner": {
+    "title": "Der nächste Schritt ist einfach.",
+    "text": "Kurzes Erstgespräch – unverbindlich, kostenlos."
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Häufige Fragen",
+    "items": [
+      {
+        "q": "Was genau macht die Bewerberbrücke?",
+        "a": "Wir entwickeln digitale Wachstumssysteme für Unternehmen, die Sichtbarkeit, Außenwirkung und Mitarbeitergewinnung planbarer machen. Dabei geht es nicht um einzelne Maßnahmen, sondern um eine klare Struktur, in der die richtigen Bausteine sinnvoll zusammenspielen."
+      },
+      {
+        "q": "Für welche Unternehmen ist die Zusammenarbeit sinnvoll?",
+        "a": "Wir arbeiten vor allem mit wachstumsorientierten Unternehmen, die nach außen klarer auftreten, relevanter sichtbar werden und die Mitarbeitergewinnung nicht länger dem Zufall überlassen wollen. Entscheidend ist weniger die Branche als die Bereitschaft, Wachstum strukturierter anzugehen."
+      },
+      {
+        "q": "Startet die Zusammenarbeit direkt mit einer Analyse?",
+        "a": "Nein. Im ersten Schritt gibt es ein kurzes Erstgespräch, in dem wir die Situation grob einordnen. Danach wird entschieden, inwiefern eine Wachstumsanalyse sinnvoll ist und welche nächsten Schritte wirklich passen."
+      },
+      {
+        "q": "Läuft die Zusammenarbeit mit jedem Kunden gleich?",
+        "a": "Nein. Wir arbeiten nicht mit beliebigen Standardlösungen, sondern mit einem klaren System, das individuell auf die jeweilige Ausgangslage angepasst wird. Entscheidend ist, wo die eigentlichen Engpässe liegen und welche Bausteine dort wirklich Wirkung erzeugen."
+      },
+      {
+        "q": "Welche Bausteine können Teil der Zusammenarbeit sein?",
+        "a": "Je nach Zielbild und Ausgangslage können unter anderem Content, Videografie, Webdesign, Social Recruiting oder weitere operative Verstärker Teil des Systems sein – als Bausteine innerhalb einer klaren Wachstumslogik."
+      },
+      {
+        "q": "Wie schnell sieht man erste Ergebnisse?",
+        "a": "Das hängt immer von der Ausgangslage, dem Ziel und den gewählten Hebeln ab. Entscheidend ist für uns nicht, schnellstmöglich gehaltlose Ergebnisse zu liefern – sondern zuerst die richtige Struktur aufzubauen, damit daraus auch nachhaltig Wirkung entsteht."
+      },
+      {
+        "q": "Muss ich mich direkt langfristig binden?",
+        "a": "Nein. Im ersten Schritt geht es um eine saubere Einordnung Ihrer Situation. So wird klar, welche Form der individuellen Zusammenarbeit für Sie sinnvoll ist."
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Klarheit, Sichtbarkeit und Mitarbeitergewinnung brauchen Struktur.",
+    "text": "Genau dafür entwickeln wir digitale Wachstumssysteme, die Unternehmen helfen, nach außen klarer aufzutreten und Wachstum planbarer zu machen."
+  }
+}

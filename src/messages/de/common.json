@@ -1,0 +1,27 @@
+{
+  "nav": {
+    "home": "Home",
+    "referenzen": "Referenzen",
+    "ueberUns": "Über uns",
+    "kontakt": "Kontakt",
+    "impressum": "Impressum",
+    "ctaLabel": "Kontakt",
+    "topBar": "Kurzes Erstgespräch vereinbaren:",
+    "topBarPhone": "06403 / 9179483"
+  },
+  "footer": {
+    "tagline": "bewerben · begeistern · binden",
+    "description": "Digitale Wachstumssysteme für planbare Sichtbarkeit und Mitarbeitergewinnung.",
+    "navHeading": "Navigation",
+    "contactHeading": "Kontakt",
+    "email": "info@bewerberbruecke.com",
+    "phone": "06403 / 9179483",
+    "address": "Fronhofstraße 18\n35440 Linden",
+    "copyright": "Bewerberbrücke e.K. · Alle Rechte vorbehalten"
+  },
+  "buttons": {
+    "erstgespraech": "Erstgespräch anfragen",
+    "wachstumsanalyse": "Wachstumsanalyse anfragen",
+    "fallstudie": "Fallstudie ansehen"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "title": "Referenzen – Bewerberbrücke",
+    "description": "Fallstudien und Ergebnisse aus abgeschlossenen Projekten."
+  },
+  "hero": {
+    "label": "Referenzen",
+    "title": "Fallstudien & Ergebnisse",
+    "subtitle": "Einblicke in abgeschlossene Projekte und die Ergebnisse, die daraus entstanden sind."
+  },
+  "cases": [
+    {
+      "client": "Pflegeeinrichtung Rhein-Main",
+      "sector": "Altenpflege",
+      "result": "+14 Bewerbungen in 6 Wochen",
+      "detail": "Vorher: Keine digitale Präsenz, kaum Bewerbungen. Nachher: Klarere Positionierung, Social-Media-Aufbau und gezielte Kampagnenstrategie brachten planbare Bewerbereingänge.",
+      "tag": "Social Recruiting"
+    },
+    {
+      "client": "Sozialstation Mittelhessen",
+      "sector": "Ambulante Pflege",
+      "result": "Sichtbarkeit in der Region aufgebaut",
+      "detail": "Lokale Arbeitgebermarke gestärkt, professionelle Außenwirkung etabliert und Recruiting-Prozess strukturiert. Ergebnis: Bessere Qualität der Bewerbungen.",
+      "tag": "Employer Branding"
+    },
+    {
+      "client": "Betreuungseinrichtung Nord",
+      "sector": "Behindertenhilfe",
+      "result": "Mitarbeitergewinnung planbarer gemacht",
+      "detail": "Durch klares Messaging und konsistente Content-Strategie konnten offene Stellen schneller besetzt werden. Aufbau eines eigenständigen Recruiting-Systems.",
+      "tag": "Wachstumssystem"
+    }
+  ],
+  "cta": {
+    "title": "Ähnliche Ergebnisse für Ihr Unternehmen?",
+    "text": "Lassen Sie uns in einem kurzen Erstgespräch prüfen, welche Hebel bei Ihnen wirklich wirken."
+  }
+}

@@ -1,0 +1,77 @@
+/* ============================================================
+   LAYOUT – Container, Grid-Hilfsklassen, Section-Wrapper
+   ============================================================ */
+
+/* ---- Container ---- */
+.container {
+  max-width:  1200px;
+  margin:     0 auto;
+  padding:    0 2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+}
+
+/* ---- Sections ---- */
+.section {
+  padding: var(--section-py) 0;
+}
+
+.section--dark {
+  background: var(--primary);
+  color:      var(--white);
+}
+
+.section--light {
+  background: var(--section-bg);
+}
+
+.section--accent {
+  background: var(--accent);
+}
+
+/* ---- Grid-Hilfsklassen ---- */
+.two-col {
+  display:               grid;
+  grid-template-columns: 1fr 1fr;
+  gap:                   var(--gap-lg);
+  align-items:           start;
+}
+
+.three-col {
+  display:               grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:                   var(--gap-md);
+}
+
+.auto-grid {
+  display:               grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap:                   var(--gap-md);
+}
+
+@media (max-width: 768px) {
+  .two-col,
+  .three-col {
+    grid-template-columns: 1fr;
+    gap:                   var(--gap-sm);
+  }
+}
+
+/* ---- Sektion-Kopfzeile (Label + Titel) ---- */
+.section-header {
+  text-align:    center;
+  margin-bottom: var(--gap-lg);
+}
+
+.section-label {
+  font-size:      0.75rem;
+  letter-spacing: 0.14em;
+  color:          var(--accent);
+  text-transform: uppercase;
+  font-weight:    600;
+  margin-bottom:  0.75rem;
+}

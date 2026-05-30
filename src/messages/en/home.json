@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "title": "Bewerberbrücke – Social Recruiting for Care & Social Sector",
+    "description": "Predictable visibility and staff recruitment. We build the machine that generates applicants for you."
+  },
+  "hero": {
+    "badge": "Social Recruiting · Care & Social Sector",
+    "title": "Predictable visibility",
+    "titleAccent": "and staff recruitment.",
+    "subtitle": "We help organisations present themselves more clearly, become visible and finally make staff recruitment more predictable.",
+    "claim": "We don't place candidates. We build the machine that generates candidates for you."
+  },
+  "intro": {
+    "title": "Our 4 phases for predictable visibility and staff recruitment",
+    "text": "Many organisations are already doing something for their visibility, their website or their recruitment. The problem is that none of it usually works together efficiently. That's exactly why we don't work with loose individual services, but with a clear system."
+  },
+  "phases": [
+    {
+      "num": "01",
+      "title": "Clear presence",
+      "text": "People need to quickly understand what an organisation stands for, why it is relevant and why they should remember it. That's exactly what determines whether visibility can have any effect at all."
+    },
+    {
+      "num": "02",
+      "title": "Relevant visibility",
+      "text": "Social media, website, visual identity and content shouldn't just exist – they should ensure that an organisation is perceived more clearly, appears more professional and stays in people's minds."
+    },
+    {
+      "num": "03",
+      "title": "More predictable results",
+      "text": "In the end it's not about nice-looking measures, but about generating more predictable enquiries, applications and real next steps. That's often where things fall apart when structure is missing."
+    },
+    {
+      "num": "04",
+      "title": "System build",
+      "text": "On this basis, a clear structure emerges in which the right building blocks work together in the right place. From visibility and website through to enquiries, applications and clean follow-through."
+    }
+  ],
+  "process": {
+    "label": "Process",
+    "title": "How working together looks",
+    "steps": [
+      {
+        "title": "Intro call",
+        "text": "In the first step we look together at where you currently stand, what's already in place and where things are getting stuck. This quickly clarifies whether and how we can help."
+      },
+      {
+        "title": "Growth analysis",
+        "text": "Then we go deeper. We analyse visibility, external image and staff recruitment, make bottlenecks visible and identify the most effective levers for the next steps."
+      },
+      {
+        "title": "System build",
+        "text": "On this basis a clear structure is developed in which the right building blocks work together – scalable and tailored to your organisation."
+      }
+    ]
+  },
+  "ctaBanner": {
+    "title": "The next step is simple.",
+    "text": "Short intro call – no obligation, no cost."
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "q": "What exactly does Bewerberbrücke do?",
+        "a": "We develop digital growth systems for organisations that want to make visibility, external image and staff recruitment more predictable. It's not about individual measures, but about a clear structure in which the right building blocks work sensibly together."
+      },
+      {
+        "q": "Which organisations benefit from working together?",
+        "a": "We mainly work with growth-oriented organisations that want to present themselves more clearly externally, become more relevantly visible and no longer leave staff recruitment to chance. The industry matters less than the willingness to approach growth more systematically."
+      },
+      {
+        "q": "Does collaboration start directly with an analysis?",
+        "a": "No. The first step is a short intro call where we broadly assess the situation. Then we decide whether a growth analysis makes sense and which next steps really fit."
+      },
+      {
+        "q": "Does the collaboration look the same for every client?",
+        "a": "No. We don't work with arbitrary standard solutions, but with a clear system that is individually adapted to the respective starting point. What matters is where the real bottlenecks are and which building blocks will actually have an effect there."
+      },
+      {
+        "q": "What building blocks can be part of the collaboration?",
+        "a": "Depending on the goal and starting point, content, videography, web design, social recruiting or other operational enhancers can be part of the system – as building blocks within a clear growth logic."
+      },
+      {
+        "q": "How quickly do you see first results?",
+        "a": "That always depends on the starting point, the goal and the levers chosen. What matters to us is not delivering superficial results as quickly as possible – but first building the right structure so that sustainable impact follows."
+      },
+      {
+        "q": "Do I have to commit long-term straight away?",
+        "a": "No. The first step is a clean assessment of your situation. This makes it clear which form of individual collaboration makes sense for you."
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Clarity, visibility and staff recruitment need structure.",
+    "text": "That's exactly what we develop digital growth systems for – helping organisations present themselves more clearly and make growth more predictable."
+  }
+}

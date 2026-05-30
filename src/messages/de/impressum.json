@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "Impressum – Bewerberbrücke",
+    "description": "Impressum und Datenschutzhinweise der Bewerberbrücke e.K."
+  },
+  "title": "Impressum",
+  "subtitle": "Angaben gemäß § 5 TMG",
+  "sections": [
+    {
+      "title": "Anbieter",
+      "lines": ["Bewerberbrücke e.K.", "Fronhofstraße 18", "35440 Linden", "Deutschland"]
+    },
+    {
+      "title": "Kontakt",
+      "lines": ["Telefon: 06403 / 9179483", "E-Mail: info@bewerberbruecke.com"]
+    },
+    {
+      "title": "Verantwortlich für den Inhalt (§ 55 Abs. 2 RStV)",
+      "lines": ["Bewerberbrücke e.K.", "Fronhofstraße 18", "35440 Linden"]
+    },
+    {
+      "title": "Haftungsausschluss",
+      "lines": ["Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich."]
+    },
+    {
+      "title": "Datenschutz",
+      "lines": ["Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder E-Mail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben."]
+    }
+  ]
+}

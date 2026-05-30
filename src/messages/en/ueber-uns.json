@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "title": "About us – Bewerberbrücke",
+    "description": "Who is behind Bewerberbrücke and what drives us."
+  },
+  "hero": {
+    "label": "About us",
+    "title": "The people behind Bewerberbrücke"
+  },
+  "intro": {
+    "title": "We solve a structural problem.",
+    "p1": "Many companies in the care and social sector are not struggling with a candidate problem – they are struggling with a visibility problem. They simply aren't found. Or they are found, but don't come across convincingly enough to start a conversation.",
+    "p2": "This is exactly where we come in. We don't develop loose measures, but a digital growth system that makes visibility, external image and staff recruitment more predictable.",
+    "p3": "Our approach is systemic, not reactive. We don't start with a campaign – we start with a clear assessment."
+  },
+  "values": {
+    "heading": "Our values",
+    "items": [
+      {
+        "title": "Clarity over actionism",
+        "text": "We analyse first – then act with purpose."
+      },
+      {
+        "title": "Structure over one-off measures",
+        "text": "Sustainability comes from systems, not isolated actions."
+      },
+      {
+        "title": "Honesty over promises",
+        "text": "We say what's realistic – no empty promises."
+      },
+      {
+        "title": "Impact over optics",
+        "text": "Nice-looking measures that don't deliver anything are worthless."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Get to know us.",
+    "text": "In the intro call you'll quickly find out whether and how we can help."
+  }
+}
