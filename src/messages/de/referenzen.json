@@ -6,31 +6,55 @@
   "hero": {
     "label": "Referenzen",
     "title": "Fallstudien & Ergebnisse",
-    "subtitle": "Einblicke in abgeschlossene Projekte und die Ergebnisse, die daraus entstanden sind."
+    "subtitle": "Nicht die Maßnahme allein entscheidet. Sondern wie alles zusammenspielt."
   },
+  "intro": "Je nach Ausgangslage liegt der stärkste Hebel in der Außenwirkung, in der Sichtbarkeit oder in der Mitarbeitergewinnung. Entscheidend ist für uns nie nur die einzelne Maßnahme, sondern die Frage, wie daraus ein funktionierendes System mit echter Wirkung entsteht.",
   "cases": [
+    {
+      "client": "Haus Hohensolms gGmbH",
+      "sector": "Soziale Einrichtung",
+      "result": "138 Bewerbungen in 12 Monaten",
+      "tag": "Wachstumssystem",
+      "situation": "Die Haus Hohensolms gGmbH ist eine soziale Einrichtung im ländlichen Raum mit einem sehr wichtigen gesellschaftlichen Auftrag. Wie bei vielen Einrichtungen außerhalb urbaner Zentren bestand die Herausforderung darin, als Arbeitgeber online sichtbarer und für passende Bewerber greifbarer zu werden.",
+      "challenge": "Gesucht war ein Weg, die Arbeitgeberwahrnehmung zu stärken, die Sichtbarkeit in der Region auszubauen und den Bewerbungsprozess so zu gestalten, dass interessierte Fachkräfte einfacher und klarer in Kontakt treten können.",
+      "approach": "Gemeinsam wurde die Mitarbeitergewinnung als Teil eines klaren Systems aufgebaut. Dazu gehörten ein authentischerer Außenauftritt, stärkere Sichtbarkeit als Arbeitgeber, ein klarer Bewerbungsweg und eine Struktur, die Interessenten gezielt anspricht und weiterführt.",
+      "result_detail": "Innerhalb von 12 Monaten konnten 138 Bewerbungen generiert werden. Zusätzlich wurde die Haus Hohensolms gGmbH als Arbeitgeber in der Region deutlich sichtbarer wahrgenommen und der Bewerbungs- und Einstellungsprozess spürbar entlastet.",
+      "insight": "Wenn die Sichtbarkeit, die Außenwirkung und der Bewerbungsprozess optimal zusammenspielen, wird die Mitarbeitergewinnung deutlich planbarer. Genau darin liegt der Unterschied zwischen einer einzelnen Maßnahme und einem funktionierenden System.",
+      "videoUrl": "https://www.youtube.com/shorts/LM1vNw4uEsw"
+    },
     {
       "client": "Pflegeeinrichtung Rhein-Main",
       "sector": "Altenpflege",
       "result": "+14 Bewerbungen in 6 Wochen",
-      "detail": "Vorher: Keine digitale Präsenz, kaum Bewerbungen. Nachher: Klarere Positionierung, Social-Media-Aufbau und gezielte Kampagnenstrategie brachten planbare Bewerbereingänge.",
-      "tag": "Social Recruiting"
+      "tag": "Social Recruiting",
+      "situation": "",
+      "challenge": "",
+      "approach": "",
+      "result_detail": "Vorher: Keine digitale Präsenz, kaum Bewerbungen. Nachher: Klarere Positionierung, Social-Media-Aufbau und gezielte Kampagnenstrategie brachten planbare Bewerbereingänge.",
+      "insight": "",
+      "videoUrl": ""
     },
     {
       "client": "Sozialstation Mittelhessen",
       "sector": "Ambulante Pflege",
       "result": "Sichtbarkeit in der Region aufgebaut",
-      "detail": "Lokale Arbeitgebermarke gestärkt, professionelle Außenwirkung etabliert und Recruiting-Prozess strukturiert. Ergebnis: Bessere Qualität der Bewerbungen.",
-      "tag": "Employer Branding"
-    },
-    {
-      "client": "Betreuungseinrichtung Nord",
-      "sector": "Behindertenhilfe",
-      "result": "Mitarbeitergewinnung planbarer gemacht",
-      "detail": "Durch klares Messaging und konsistente Content-Strategie konnten offene Stellen schneller besetzt werden. Aufbau eines eigenständigen Recruiting-Systems.",
-      "tag": "Wachstumssystem"
+      "tag": "Employer Branding",
+      "situation": "",
+      "challenge": "",
+      "approach": "",
+      "result_detail": "Lokale Arbeitgebermarke gestärkt, professionelle Außenwirkung etabliert und Recruiting-Prozess strukturiert. Ergebnis: Bessere Qualität der Bewerbungen.",
+      "insight": "",
+      "videoUrl": ""
     }
   ],
+  "labels": {
+    "situation": "Ausgangssituation",
+    "challenge": "Herausforderung",
+    "approach": "Unser Ansatz",
+    "result": "Ergebnis",
+    "insight": "Was dieses Projekt zeigt",
+    "video": "Zum Referenzvideo"
+  },
   "cta": {
     "title": "Ähnliche Ergebnisse für Ihr Unternehmen?",
     "text": "Lassen Sie uns in einem kurzen Erstgespräch prüfen, welche Hebel bei Ihnen wirklich wirken."

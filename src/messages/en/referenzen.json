@@ -6,31 +6,55 @@
   "hero": {
     "label": "References",
     "title": "Case Studies & Results",
-    "subtitle": "Insights into completed projects and the results they produced."
+    "subtitle": "It's not just the measure that matters. It's how everything works together."
   },
+  "intro": "Depending on the starting point, the strongest lever may lie in external image, visibility or staff recruitment. For us, it's never just about the individual measure, but about how a functioning system with real impact can emerge from it.",
   "cases": [
+    {
+      "client": "Haus Hohensolms gGmbH",
+      "sector": "Social care facility",
+      "result": "138 applications in 12 months",
+      "tag": "Growth System",
+      "situation": "Haus Hohensolms gGmbH is a social care facility in a rural area with an important social mission. Like many organisations outside urban centres, the challenge was to become more visible online as an employer and more accessible to suitable candidates.",
+      "challenge": "The goal was to strengthen employer perception, expand regional visibility and design the application process so that interested professionals could get in touch more easily and clearly.",
+      "approach": "Together, staff recruitment was built as part of a clear system. This included a more authentic external presence, stronger visibility as an employer, a clear application pathway and a structure that specifically addresses and follows up with interested candidates.",
+      "result_detail": "Within 12 months, 138 applications were generated. In addition, Haus Hohensolms gGmbH became significantly more visible as an employer in the region and the application and hiring process was noticeably relieved.",
+      "insight": "When visibility, external image and the application process work together optimally, staff recruitment becomes much more predictable. That is exactly the difference between a single measure and a functioning system.",
+      "videoUrl": "https://www.youtube.com/shorts/LM1vNw4uEsw"
+    },
     {
       "client": "Care Facility Rhine-Main",
       "sector": "Elderly care",
       "result": "+14 applications in 6 weeks",
-      "detail": "Before: No digital presence, barely any applications. After: Clearer positioning, social media setup and targeted campaign strategy brought predictable application volumes.",
-      "tag": "Social Recruiting"
+      "tag": "Social Recruiting",
+      "situation": "",
+      "challenge": "",
+      "approach": "",
+      "result_detail": "Before: No digital presence, barely any applications. After: Clearer positioning, social media setup and targeted campaign strategy brought predictable application volumes.",
+      "insight": "",
+      "videoUrl": ""
     },
     {
       "client": "Social Station Central Hesse",
       "sector": "Outpatient care",
       "result": "Regional visibility established",
-      "detail": "Local employer brand strengthened, professional external image established and recruiting process structured. Result: Higher quality of applications.",
-      "tag": "Employer Branding"
-    },
-    {
-      "client": "Care Facility North",
-      "sector": "Disability support",
-      "result": "Staff recruitment made more predictable",
-      "detail": "Through clear messaging and a consistent content strategy, open positions could be filled faster. Built an independent recruiting system.",
-      "tag": "Growth System"
+      "tag": "Employer Branding",
+      "situation": "",
+      "challenge": "",
+      "approach": "",
+      "result_detail": "Local employer brand strengthened, professional external image established and recruiting process structured. Result: Higher quality of applications.",
+      "insight": "",
+      "videoUrl": ""
     }
   ],
+  "labels": {
+    "situation": "Starting point",
+    "challenge": "Challenge",
+    "approach": "Our approach",
+    "result": "Result",
+    "insight": "What this project shows",
+    "video": "Watch reference video"
+  },
   "cta": {
     "title": "Similar results for your organisation?",
     "text": "Let us check in a short intro call which levers really work for you."

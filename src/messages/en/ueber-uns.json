@@ -5,32 +5,47 @@
   },
   "hero": {
     "label": "About us",
-    "title": "The people behind Bewerberbrücke"
+    "title": "Bewerberbrücke stands for clarity, impact and structure"
   },
   "intro": {
-    "title": "We solve a structural problem.",
-    "p1": "Many companies in the care and social sector are not struggling with a candidate problem – they are struggling with a visibility problem. They simply aren't found. Or they are found, but don't come across convincingly enough to start a conversation.",
-    "p2": "This is exactly where we come in. We don't develop loose measures, but a digital growth system that makes visibility, external image and staff recruitment more predictable.",
-    "p3": "Our approach is systemic, not reactive. We don't start with a campaign – we start with a clear assessment."
+    "p1": "We distance ourselves from arbitrary measures that look good short-term but ultimately move too little.",
+    "p2": "We believe in clear structures, strong external presence and a way of working that helps organisations not only become more visible, but also clearer and more effective in how they present themselves."
   },
-  "values": {
-    "heading": "Our values",
-    "items": [
+  "sections": [
+    {
+      "title": "Why we work the way we do",
+      "text": "Many organisations are already working on their visibility, their website or their staff recruitment. What is often missing is the clear thread running through it all. That's exactly why we don't start with individual measures, but with the question of what really needs to fit together for impact to emerge in the end."
+    },
+    {
+      "title": "How we understand collaboration",
+      "text": "For us, collaboration doesn't mean simply working through a list of services. We want to genuinely understand where an organisation currently stands, what's already in place and where things are getting stuck. Only then can we clearly decide what really makes sense and what will actually hold up over time."
+    },
+    {
+      "title": "What matters to us",
+      "text": "Consideration over actionism. Effectiveness over arbitrariness. Goal-oriented over coincidental. That is the foundation on which we work with organisations."
+    }
+  ],
+  "team": {
+    "heading": "Behind Bewerberbrücke e.K.",
+    "members": [
       {
-        "title": "Clarity over actionism",
-        "text": "We analyse first – then act with purpose."
+        "name": "Finn Loreth",
+        "role": "Founder & Managing Director",
+        "quote": "Impact doesn't come from as many measures as possible, but from clarity and structure. That's exactly why for me it's about systems that make a difference in everyday life.",
+        "image": "/images/team/finn-loreth.jpg",
+        "socials": {
+          "facebook": "https://www.facebook.com/profile.php?id=61576245745548",
+          "instagram": "https://www.instagram.com/bewerberbruecke/",
+          "youtube": "https://www.youtube.com/@Bewerberbrücke",
+          "whatsapp": "https://wa.me/+4915756039148"
+        }
       },
       {
-        "title": "Structure over one-off measures",
-        "text": "Sustainability comes from systems, not isolated actions."
-      },
-      {
-        "title": "Honesty over promises",
-        "text": "We say what's realistic – no empty promises."
-      },
-      {
-        "title": "Impact over optics",
-        "text": "Nice-looking measures that don't deliver anything are worthless."
+        "name": "Philipp Gornert",
+        "role": "",
+        "quote": "",
+        "image": "/images/team/philipp-gornert.jpg",
+        "socials": {}
       }
     ]
   },
