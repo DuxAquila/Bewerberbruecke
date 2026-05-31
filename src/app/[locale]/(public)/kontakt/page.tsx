@@ -35,7 +35,7 @@ export default function Kontakt() {
 
       {/* Inhalt */}
       <section className="section">
-        <div className="container max-w-lg" style={{ display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: "5rem", alignItems: "start" }}>
+        <div className="container max-w-lg contact-layout">
 
           {/* Sidebar */}
           <div>

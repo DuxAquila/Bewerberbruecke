@@ -47,7 +47,7 @@ export default function ContactForm() {
   }
 
   return (
-    <div style={{ background: "var(--white)", border: "1px solid var(--border)", borderRadius: "var(--radius-lg)", padding: "2.5rem" }}>
+    <div className="contact-form-card">
       <h2 style={{ fontSize: "1.2rem", marginBottom: "2rem" }}>Ihre Anfrage</h2>
 
       {status === "error" && (
@@ -59,7 +59,7 @@ export default function ContactForm() {
       <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
 
         {/* Name + Unternehmen */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+        <div className="form-name-grid">
           <div>
             <label className="form-label">{t("nameLabel")}</label>
             <input

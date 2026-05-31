@@ -205,3 +205,33 @@
   outline:         none;
   transition:      border-color 0.2s;
 }
+
+/* ---- Kontaktformular Card ---- */
+.contact-form-card {
+  background:    var(--white);
+  border:        1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding:       2.5rem;
+}
+
+@media (max-width: 480px) {
+  .contact-form-card {
+    padding:       1.5rem 1.25rem;
+    border-radius: var(--radius-md);
+    border-left:   none;
+    border-right:  none;
+  }
+}
+
+/* ---- Name/Firma Grid im Kontaktformular ---- */
+.form-name-grid {
+  display:               grid;
+  grid-template-columns: 1fr 1fr;
+  gap:                   1rem;
+}
+
+@media (max-width: 480px) {
+  .form-name-grid {
+    grid-template-columns: 1fr;
+  }
+}

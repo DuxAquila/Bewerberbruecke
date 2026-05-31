@@ -75,3 +75,18 @@
   font-weight:    600;
   margin-bottom:  0.75rem;
 }
+
+/* ---- Kontaktseite Layout ---- */
+.contact-layout {
+  display:               grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap:                   5rem;
+  align-items:           start;
+}
+
+@media (max-width: 768px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap:                   2.5rem;
+  }
+}
