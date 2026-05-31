@@ -32,8 +32,60 @@ model User {
   roleId String?
   role   Role?   @relation(fields: [roleId], references: [id])
 
+  // ── 2FA (freiwillig, TOTP) ──────────────────────────
+  twoFactorEnabled  Boolean @default(false)
+  twoFactorSecret   String? // verschlüsselt gespeichert (AES via lib/crypto)
+  twoFactorBackup   Json?   // Array aus gehashten Backup-Codes (8 Stück)
+  twoFactorSetupAt  DateTime?
+
+  // ── Einladungs-System ────────────────────────────────
+  inviteToken      String?   @unique
+  inviteExpiresAt  DateTime?
+  inviteAcceptedAt DateTime?
+
+  // ── Session-Sicherheit ───────────────────────────────
+  lastLoginAt     DateTime?
+  lastLoginIp     String?
+  failedLogins    Int       @default(0)
+  lockedUntil     DateTime? // temporäre Sperre nach X Fehlversuchen
+
+  // ── 2FA Banner-Hinweis ───────────────────────────────
+  twoFactorRemindAt DateTime? // null = noch nie erinnert, sonst letzter "Später"-Klick
+
+  activityLogs ActivityLog[]
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+// ─── ACTIVITY LOG ────────────────────────────────────────
+
+model ActivityLog {
+  id     String  @id @default(cuid())
+  userId String?
+  user   User?   @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  // Wer hat was gemacht
+  userName String // gespeicherter Name zum Zeitpunkt der Aktion (bleibt auch nach User-Löschung)
+
+  // Was wurde getan
+  action   String // z.B. CONTACT_CREATED, SEQUENCE_STARTED, USER_LOCKED, ...
+  category String // akquise | anfragen | inhalte | system | sicherheit
+
+  // Auf welches Objekt
+  entity   String? // "Contact" | "Sequence" | "BlogPost" | "User" | ...
+  entityId String? // ID des betroffenen Datensatzes
+  label    String? // lesbarer Name des Objekts z.B. "Maria Schulz"
+
+  // Optionale Zusatzinfos (z.B. vorheriger Wert bei Änderungen)
+  meta Json?
+
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+  @@index([action])
+  @@index([category])
+  @@index([createdAt])
 }
 
 // ─── CRM ────────────────────────────────────────────────
@@ -72,14 +124,14 @@ model Sequence {
 }
 
 model SequenceStep {
-  id         String @id @default(cuid())
+  id         String   @id @default(cuid())
   sequenceId String
   sequence   Sequence @relation(fields: [sequenceId], references: [id], onDelete: Cascade)
 
-  dayOffset  Int    // Tag X nach Start
-  subject    String
-  body       String @db.LongText // Template mit {{name}}, {{unternehmen}} etc.
-  order      Int
+  dayOffset Int    // Tag X nach Start
+  subject   String
+  body      String @db.LongText // Template mit {{name}}, {{unternehmen}} etc.
+  order     Int
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -92,11 +144,11 @@ model SequenceRun {
   sequenceId String
   sequence   Sequence @relation(fields: [sequenceId], references: [id], onDelete: Cascade)
 
-  status      String   @default("active") // active, paused, completed, unsubscribed
-  currentStep Int      @default(0)
-  startedAt   DateTime @default(now())
+  status      String    @default("active") // active, paused, completed, unsubscribed
+  currentStep Int       @default(0)
+  startedAt   DateTime  @default(now())
   pausedAt    DateTime?
-  pauseReason String?  // z.B. "replied"
+  pauseReason String?   // z.B. "replied"
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -111,18 +163,18 @@ model EmailLog {
   contactId String?
   contact   Contact? @relation(fields: [contactId], references: [id], onDelete: SetNull)
 
-  to          String
-  subject     String
-  body        String  @db.LongText
-  type        String  // sequence, newsletter, manual, contact_form
+  to            String
+  subject       String
+  body          String @db.LongText
+  type          String // sequence, newsletter, manual, contact_form
   trackingToken String @unique @default(cuid())
 
-  sentAt      DateTime @default(now())
-  delivered   Boolean  @default(false)
+  sentAt      DateTime  @default(now())
+  delivered   Boolean   @default(false)
   deliveredAt DateTime?
-  opened      Boolean  @default(false)
+  opened      Boolean   @default(false)
   openedAt    DateTime?
-  openCount   Int      @default(0)
+  openCount   Int       @default(0)
 
   clicks EmailClick[]
 
@@ -130,14 +182,14 @@ model EmailLog {
 }
 
 model EmailClick {
-  id       String   @id @default(cuid())
-  logId    String
-  log      EmailLog @relation(fields: [logId], references: [id], onDelete: Cascade)
+  id    String   @id @default(cuid())
+  logId String
+  log   EmailLog @relation(fields: [logId], references: [id], onDelete: Cascade)
 
-  token       String   @unique @default(cuid())
+  token       String    @unique @default(cuid())
   originalUrl String
   clickedAt   DateTime?
-  clickCount  Int      @default(0)
+  clickCount  Int       @default(0)
 
   createdAt DateTime @default(now())
 }
@@ -145,24 +197,24 @@ model EmailClick {
 // ─── NEWSLETTER ─────────────────────────────────────────
 
 model NewsletterSubscriber {
-  id        String   @id @default(cuid())
-  email     String   @unique
-  name      String?
-  optIn     Boolean  @default(false)
-  optInAt   DateTime?
-  optOutAt  DateTime?
-  active    Boolean  @default(true)
+  id       String    @id @default(cuid())
+  email    String    @unique
+  name     String?
+  optIn    Boolean   @default(false)
+  optInAt  DateTime?
+  optOutAt DateTime?
+  active   Boolean   @default(true)
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
 
 model NewsletterMail {
-  id        String   @id @default(cuid())
-  subject   String
-  body      String   @db.LongText
-  sentAt    DateTime?
-  status    String   @default("draft") // draft, sending, sent
+  id      String    @id @default(cuid())
+  subject String
+  body    String    @db.LongText
+  sentAt  DateTime?
+  status  String    @default("draft") // draft, sending, sent
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -205,8 +257,8 @@ model BlogPost {
   tags       BlogTag[]
 
   publishedAt DateTime?
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
 }
 
 // ─── GALLERY ────────────────────────────────────────────
