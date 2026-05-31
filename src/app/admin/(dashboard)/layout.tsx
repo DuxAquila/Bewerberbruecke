@@ -26,31 +26,6 @@ export default async function AdminDashboardLayout({
           </main>
         </div>
       </div>
-
-      <style>{`
-        .admin-layout {
-          display: flex;
-          min-height: 100vh;
-          background: #0f1117;
-          font-family: 'DM Sans', system-ui, sans-serif;
-        }
-        .admin-main {
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          min-width: 0;
-          overflow: hidden;
-        }
-        .admin-content {
-          flex: 1;
-          padding: 1.75rem;
-          overflow-y: auto;
-          color: rgba(255,255,255,0.85);
-        }
-        @media (max-width: 768px) {
-          .admin-layout { flex-direction: column; }
-        }
-      `}</style>
     </AdminSessionProvider>
   );
 }

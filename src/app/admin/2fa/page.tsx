@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 
 function TwoFactorContent() {
   const { data: session, update } = useSession();
-  const router   = useRouter();
+  const router = useRouter();
   const [code, setCode]             = useState(["", "", "", "", "", ""]);
   const [isBackup, setIsBackup]     = useState(false);
   const [backupCode, setBackupCode] = useState("");
@@ -57,10 +57,7 @@ function TwoFactorContent() {
     const res = await fetch("/api/auth/2fa-verify", {
       method:  "POST",
       headers: { "Content-Type": "application/json" },
-      body:    JSON.stringify({
-        code:     isBackup ? backupCode.trim() : finalCode,
-        isBackup,
-      }),
+      body:    JSON.stringify({ code: isBackup ? backupCode.trim() : finalCode, isBackup }),
     });
 
     setLoading(false);
@@ -78,20 +75,25 @@ function TwoFactorContent() {
   }
 
   return (
-    <div className="tfa-root">
-      <div className="tfa-card">
-        <div className="tfa-logo">
-          <span className="tfa-logo-text">Bewerberbrücke</span>
-          <span className="tfa-logo-sub">Admin</span>
+    <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", background: "var(--admin-bg)", padding: "1.5rem" }}>
+      <div className="admin-card" style={{ width: "100%", maxWidth: 380, textAlign: "center" }}>
+        <div style={{ marginBottom: "1.5rem" }}>
+          <span className="admin-sidebar-logo-name">Bewerberbrücke</span>
+          {" "}
+          <span className="admin-sidebar-logo-tag">Admin</span>
         </div>
 
         {!isBackup ? (
           <>
-            <div className="tfa-icon">🔐</div>
-            <h1 className="tfa-title">Zwei-Faktor-Prüfung</h1>
-            <p className="tfa-desc">Gib den 6-stelligen Code aus deiner Authenticator App ein.</p>
+            <div style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>🔐</div>
+            <h1 style={{ fontSize: "1.4rem", fontWeight: 600, color: "var(--admin-text)", marginBottom: "0.5rem", letterSpacing: "-0.02em", fontFamily: "var(--font-sans)" }}>
+              Zwei-Faktor-Prüfung
+            </h1>
+            <p style={{ fontSize: "0.875rem", color: "var(--admin-text-muted)", marginBottom: "2rem", lineHeight: 1.5 }}>
+              Gib den 6-stelligen Code aus deiner Authenticator App ein.
+            </p>
 
-            <div className="code-inputs" onPaste={handlePaste}>
+            <div style={{ display: "flex", gap: "0.5rem", justifyContent: "center", marginBottom: "1.5rem" }} onPaste={handlePaste}>
               {code.map((digit, i) => (
                 <input
                   key={i}
@@ -99,77 +101,92 @@ function TwoFactorContent() {
                   type="text"
                   inputMode="numeric"
                   maxLength={1}
-                  className={`code-box ${digit ? "filled" : ""}`}
                   value={digit}
                   onChange={(e) => handleDigit(i, e.target.value)}
                   onKeyDown={(e) => handleKeyDown(i, e)}
                   autoFocus={i === 0}
+                  style={{
+                    width: 44, height: 52,
+                    background: digit ? "var(--admin-accent-bg)" : "var(--admin-surface-2)",
+                    border: `1px solid ${digit ? "var(--accent)" : "var(--admin-border)"}`,
+                    borderRadius: "var(--radius-md)",
+                    textAlign: "center",
+                    fontSize: "1.25rem",
+                    fontWeight: 600,
+                    color: digit ? "var(--accent)" : "var(--admin-text)",
+                    outline: "none",
+                    caretColor: "transparent",
+                  }}
                 />
               ))}
             </div>
 
-            {error && <div className="tfa-error" role="alert">{error}</div>}
+            {error && (
+              <div style={{ background: "var(--admin-danger-bg)", border: "1px solid var(--admin-danger)", borderRadius: "var(--radius-md)", padding: "0.6rem 1rem", fontSize: "0.85rem", color: "var(--admin-danger)", marginBottom: "1rem", textAlign: "left" }}>
+                {error}
+              </div>
+            )}
 
-            <button className="tfa-btn" onClick={() => submitCode()} disabled={loading || code.join("").length < 6}>
+            <button
+              className="admin-btn admin-btn-primary"
+              onClick={() => submitCode()}
+              disabled={loading || code.join("").length < 6}
+              style={{ width: "100%", justifyContent: "center", padding: "0.75rem", marginBottom: "1rem" }}
+            >
               {loading ? "Wird geprüft…" : "Bestätigen"}
             </button>
-            <button className="tfa-link" onClick={() => { setIsBackup(true); setError(""); }}>
+            <button
+              onClick={() => { setIsBackup(true); setError(""); }}
+              style={{ background: "none", border: "none", color: "var(--admin-text-faint)", fontSize: "0.8rem", cursor: "pointer", fontFamily: "var(--font-sans)" }}
+            >
               Backup-Code verwenden
             </button>
           </>
         ) : (
           <>
-            <div className="tfa-icon">🔑</div>
-            <h1 className="tfa-title">Backup-Code</h1>
-            <p className="tfa-desc">Gib einen deiner gespeicherten Backup-Codes ein.</p>
+            <div style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>🔑</div>
+            <h1 style={{ fontSize: "1.4rem", fontWeight: 600, color: "var(--admin-text)", marginBottom: "0.5rem", letterSpacing: "-0.02em", fontFamily: "var(--font-sans)" }}>
+              Backup-Code
+            </h1>
+            <p style={{ fontSize: "0.875rem", color: "var(--admin-text-muted)", marginBottom: "2rem", lineHeight: 1.5 }}>
+              Gib einen deiner gespeicherten Backup-Codes ein.
+            </p>
 
-            <div className="field">
+            <div style={{ textAlign: "left", marginBottom: "1.5rem" }}>
               <input
                 type="text"
-                className="field-input"
+                className="admin-field-input"
                 value={backupCode}
                 onChange={(e) => setBackupCode(e.target.value.toUpperCase())}
                 placeholder="z.B. A3F8C2E1B7"
                 autoFocus
+                style={{ textTransform: "uppercase", letterSpacing: "0.1em" }}
               />
             </div>
 
-            {error && <div className="tfa-error" role="alert">{error}</div>}
+            {error && (
+              <div style={{ background: "var(--admin-danger-bg)", border: "1px solid var(--admin-danger)", borderRadius: "var(--radius-md)", padding: "0.6rem 1rem", fontSize: "0.85rem", color: "var(--admin-danger)", marginBottom: "1rem", textAlign: "left" }}>
+                {error}
+              </div>
+            )}
 
-            <button className="tfa-btn" onClick={() => submitCode()} disabled={loading || !backupCode.trim()}>
+            <button
+              className="admin-btn admin-btn-primary"
+              onClick={() => submitCode()}
+              disabled={loading || !backupCode.trim()}
+              style={{ width: "100%", justifyContent: "center", padding: "0.75rem", marginBottom: "1rem" }}
+            >
               {loading ? "Wird geprüft…" : "Bestätigen"}
             </button>
-            <button className="tfa-link" onClick={() => { setIsBackup(false); setError(""); }}>
+            <button
+              onClick={() => { setIsBackup(false); setError(""); }}
+              style={{ background: "none", border: "none", color: "var(--admin-text-faint)", fontSize: "0.8rem", cursor: "pointer", fontFamily: "var(--font-sans)" }}
+            >
               ← Zurück zum Code
             </button>
           </>
         )}
       </div>
-
-      <style>{`
-        .tfa-root { min-height:100vh; display:flex; align-items:center; justify-content:center; background:#0f1117; padding:1.5rem; font-family:'DM Sans',system-ui,sans-serif; }
-        .tfa-card { width:100%; max-width:380px; background:#181c24; border:1px solid rgba(255,255,255,0.07); border-radius:16px; padding:2.5rem; text-align:center; }
-        .tfa-logo { display:flex; align-items:baseline; gap:0.5rem; margin-bottom:1.5rem; justify-content:center; }
-        .tfa-logo-text { font-size:1rem; font-weight:600; color:#fff; }
-        .tfa-logo-sub { font-size:0.7rem; color:rgba(255,255,255,0.3); text-transform:uppercase; letter-spacing:0.08em; }
-        .tfa-icon { font-size:2.5rem; margin-bottom:1rem; }
-        .tfa-title { font-size:1.4rem; font-weight:600; color:#fff; margin-bottom:0.5rem; letter-spacing:-0.02em; }
-        .tfa-desc { font-size:0.875rem; color:rgba(255,255,255,0.4); margin-bottom:2rem; line-height:1.5; }
-        .code-inputs { display:flex; gap:0.5rem; justify-content:center; margin-bottom:1.5rem; }
-        .code-box { width:44px; height:52px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; text-align:center; font-size:1.25rem; font-weight:600; color:#fff; outline:none; transition:border-color 0.2s; caret-color:transparent; }
-        .code-box:focus { border-color:rgba(200,169,110,0.5); }
-        .code-box.filled { border-color:rgba(200,169,110,0.4); background:rgba(200,169,110,0.08); color:#c8a96e; }
-        .tfa-error { background:rgba(239,68,68,0.1); border:1px solid rgba(239,68,68,0.2); border-radius:8px; padding:0.6rem 1rem; font-size:0.85rem; color:#f87171; margin-bottom:1rem; text-align:left; }
-        .tfa-btn { width:100%; background:#c8a96e; color:#0f1117; border:none; border-radius:8px; padding:0.75rem; font-size:0.9rem; font-weight:600; cursor:pointer; transition:opacity 0.2s; letter-spacing:0.02em; margin-bottom:1rem; }
-        .tfa-btn:hover:not(:disabled) { opacity:0.88; }
-        .tfa-btn:disabled { opacity:0.4; cursor:not-allowed; }
-        .tfa-link { background:none; border:none; color:rgba(255,255,255,0.35); font-size:0.8rem; cursor:pointer; transition:color 0.2s; padding:0; font-family:inherit; }
-        .tfa-link:hover { color:rgba(255,255,255,0.7); }
-        .field { text-align:left; }
-        .field-input { width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:0.7rem 1rem; font-size:0.9rem; color:#fff; outline:none; transition:border-color 0.2s; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:1.5rem; }
-        .field-input:focus { border-color:rgba(200,169,110,0.5); }
-        .field-input::placeholder { color:rgba(255,255,255,0.2); text-transform:none; letter-spacing:normal; }
-      `}</style>
     </div>
   );
 }

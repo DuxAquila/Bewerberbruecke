@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "@/app/style/admin.css";
 
 export const metadata: Metadata = {
   title: "Admin – Bewerberbrücke",
@@ -12,7 +13,7 @@ export default function AdminRootLayout({
 }) {
   return (
     <html lang="de">
-      <body>
+      <body className="admin-scope">
         {children}
       </body>
     </html>
