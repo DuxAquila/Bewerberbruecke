@@ -6,36 +6,36 @@ import { routing } from "./i18n/routing";
 
 const intlMiddleware = createMiddleware(routing);
 
+// Routen die KEIN Auth brauchen
+const PUBLIC_ADMIN = ["/admin/login", "/admin/2fa"];
+
 export async function proxy(req: NextRequest) {
   const pathname = req.nextUrl.pathname;
 
-  // ── Admin-Routen schützen ──────────────────────────────
-  if (pathname.includes("/admin")) {
+  if (pathname.startsWith("/admin")) {
+    // Login + 2FA sind öffentlich
+    if (PUBLIC_ADMIN.some((p) => pathname.startsWith(p))) {
+      return NextResponse.next();
+    }
+
     const token = await getToken({
       req,
       secret: process.env.NEXTAUTH_SECRET,
     });
 
-    // Nicht eingeloggt → zum Login
     if (!token) {
       const loginUrl = new URL("/admin/login", req.url);
       loginUrl.searchParams.set("callbackUrl", pathname);
       return NextResponse.redirect(loginUrl);
     }
 
-    // Eingeloggt aber 2FA noch ausstehend → nur /admin/2fa erlaubt
-    if (
-      token.twoFactorPending &&
-      !pathname.includes("/admin/2fa") &&
-      !pathname.includes("/admin/login")
-    ) {
+    if (token.twoFactorPending) {
       return NextResponse.redirect(new URL("/admin/2fa", req.url));
     }
 
     return NextResponse.next();
   }
 
-  // ── Alle anderen Routen → next-intl ───────────────────
   return intlMiddleware(req);
 }
 
