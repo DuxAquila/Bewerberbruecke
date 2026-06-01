@@ -24,7 +24,7 @@ export default function OgImage() {
         <div style={{ color: "white", fontSize: 64, fontWeight: 700, lineHeight: 1.1, marginBottom: 24 }}>
           Planbare Sichtbarkeit und Mitarbeitergewinnung.
         </div>
-        <div style={{ color: "#a0a0b0", fontSize: 28 }}>
+        <div style={{ color: "#a0a0b0", fontSize: 28, marginBottom: 40 }}>
           bewerberbruecke.com
         </div>
         <div
@@ -47,4 +47,3 @@ export default function OgImage() {
     size
   );
 }
-
