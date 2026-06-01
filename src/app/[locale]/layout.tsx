@@ -30,7 +30,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "home.meta" });
 
-  const BASE_URL = "https://bewerberbruecke.com";
+  const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://bewerberbruecke.com";
   const otherLocale = locale === "de" ? "en" : "de";
 
   return {
@@ -80,7 +80,7 @@ const jsonLd = {
   "name": "Bewerberbrücke e.K.",
   "description": "Digitale Wachstumssysteme für planbare Sichtbarkeit und Mitarbeitergewinnung im Pflege- und Sozialbereich.",
   "url": "https://bewerberbruecke.com",
-  "telephone": "+4964039179483",
+  "telephone": "+496403 9179483",
   "email": "info@bewerberbruecke.com",
   "address": {
     "@type": "PostalAddress",

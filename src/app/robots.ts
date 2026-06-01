@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://bewerberbruecke.com";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -30,6 +31,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/admin", "/api/"],
       },
     ],
-    sitemap: "https://bewerberbruecke.com/sitemap.xml",
+    sitemap: `${BASE_URL}/sitemap.xml`,
   };
 }

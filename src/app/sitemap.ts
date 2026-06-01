@@ -1,7 +1,7 @@
 
 import type { MetadataRoute } from "next";
 
-const BASE_URL = "https://bewerberbruecke.com";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://bewerberbruecke.com";
 const locales = ["de", "en"] as const;
 
 const publicPages = [
