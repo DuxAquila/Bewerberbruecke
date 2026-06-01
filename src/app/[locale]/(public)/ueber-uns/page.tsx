@@ -95,7 +95,11 @@ export default function UeberUns() {
                 <div className="team-info">
                   <div className="font-serif team-name">{m.name}</div>
                   {m.role && <div className="text-label team-role">{m.role}</div>}
-                  {m.quote && <p className="team-quote">„{m.quote}"</p>}
+                  <blockquote>
+                    {m.quote.split('\n').filter(Boolean).map((line, i) => (
+                      <p key={i}>{line}</p>
+                    ))}
+                    </blockquote>
                 </div>
 
               </div>

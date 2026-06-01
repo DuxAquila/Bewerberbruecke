@@ -32,7 +32,7 @@
         "name": "Finn Loreth",
         "role": "Founder",
         "quote": "Impact doesn't come from as many measures as possible, but from clarity and structure. That's exactly why for me it's about systems that make a difference in everyday life.",
-        "image": "/images/team/finn-loreth.jpg",
+        "image": "/images/team/finn-loreth.png",
         "socials": {
           "facebook": "https://www.facebook.com/profile.php?id=61576245745548",
           "instagram": "https://www.instagram.com/bewerberbruecke/",
@@ -42,9 +42,9 @@
       },
       {
         "name": "Philipp Gornert",
-        "role": "Client Relations & Project Lead",
-        "quote": "",
-        "image": "/images/team/philipp-gornert.jpg",
+        "role": "Head of Business Development",
+        "quote": "Growth is no coincidence. It is the result of clear positioning, genuine visibility and a system that works in everyday life. My conviction is simple: when the Mittelstand gets the right tools, it is capable of anything.\n\nThat is what I work on with full energy!",
+        "image": "/images/team/philipp-gornert.png",
         "socials": {}
       }
     ]

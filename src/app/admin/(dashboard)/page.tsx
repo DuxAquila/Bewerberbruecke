@@ -2,6 +2,26 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth/options";
 import { prisma } from "@/lib/db/client";
 
+// ─── Types ──────────────────────────────────────────────
+
+type Inquiry = {
+  id: string;
+  name: string;
+  createdAt: Date;
+  read: boolean;
+};
+
+type ActivityLog = {
+  id: string;
+  userName: string;
+  action: string;
+  label: string | null;
+  category: string;
+  createdAt: Date;
+};
+
+// ─── Data fetching ───────────────────────────────────────
+
 async function getStats() {
   const [contacts, inquiries, newsletter, emailsSent] = await Promise.all([
     prisma.contact.count(),
@@ -14,11 +34,11 @@ async function getStats() {
   return { contacts, inquiries, newsletter, emailsSent };
 }
 
-async function getRecentInquiries() {
+async function getRecentInquiries(): Promise<Inquiry[]> {
   return prisma.inquiry.findMany({ orderBy: { createdAt: "desc" }, take: 5 });
 }
 
-async function getRecentActivity() {
+async function getRecentActivity(): Promise<ActivityLog[]> {
   return prisma.activityLog.findMany({
     where: { action: { notIn: ["LOGIN_SUCCESS", "LOGIN_FAILED"] } },
     orderBy: { createdAt: "desc" },
@@ -129,7 +149,7 @@ export default async function DashboardPage() {
                 </tr>
               </thead>
               <tbody>
-                {inquiries.map((inq) => (
+                {inquiries.map((inq: Inquiry) => (
                   <tr key={inq.id}>
                     <td className="primary">{inq.name}</td>
                     <td>{new Date(inq.createdAt).toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" })}</td>
@@ -155,7 +175,7 @@ export default async function DashboardPage() {
             <p className="admin-empty">Noch keine Aktivitäten.</p>
           ) : (
             <div>
-              {activity.map((log) => (
+              {activity.map((log: ActivityLog) => (
                 <div key={log.id} style={{ display: "flex", alignItems: "flex-start", gap: "0.75rem", padding: "0.7rem 0", borderBottom: "1px solid var(--admin-border-soft)" }}>
                   <div className="admin-user-avatar" style={{ width: 28, height: 28, fontSize: "0.65rem", flexShrink: 0, marginTop: 1 }}>
                     {initials(log.userName)}
