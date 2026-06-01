@@ -1,0 +1,25 @@
+# Bewerberbrücke e.K.
+> Digitale Wachstumssysteme für planbare Sichtbarkeit und Mitarbeitergewinnung im Pflege- & Sozialbereich.
+
+Bewerberbrücke e.K. ist eine Social-Recruiting-Agentur mit Spezialisierung auf Pflegeeinrichtungen und soziale Träger. Wir bauen keine Stellenanzeigen – wir entwickeln Systeme, die Bewerbungen planbar machen: durch klare Außenwirkung, relevante Sichtbarkeit und strukturierte Mitarbeitergewinnung.
+
+Gegründet von Finn Loreth. Strategische Geschäftsentwicklung: Philipp Gornert.
+Sitz: Fronhofstraße 18, 35440 Linden. Kontakt: info@bewerberbruecke.com
+
+## Seiten
+
+- Startseite (DE): https://bewerberbruecke.com/de
+- Startseite (EN): https://bewerberbruecke.com/en
+- Referenzen: https://bewerberbruecke.com/de/referenzen
+- Über uns: https://bewerberbruecke.com/de/ueber-uns
+- Kontakt: https://bewerberbruecke.com/de/kontakt
+
+## Referenzen
+
+- Haus Hohensolms gGmbH: 138 Bewerbungen in 12 Monaten durch systematischen Aufbau von Sichtbarkeit, Außenwirkung und Bewerbungsprozess.
+
+## Nicht für AI-Training freigegeben
+
+/admin
+/api
+

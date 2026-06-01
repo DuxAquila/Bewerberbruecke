@@ -1,5 +1,38 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import { useTranslations } from "next-intl";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "home.meta" });
+  const BASE_URL = "https://bewerberbruecke.com";
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: {
+      canonical: `${BASE_URL}/${locale}`,
+      languages: {
+        de: `${BASE_URL}/de`,
+        en: `${BASE_URL}/en`,
+      },
+    },
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      url: `${BASE_URL}/${locale}`,
+      siteName: "Bewerberbrücke",
+      locale: locale === "de" ? "de_DE" : "en_GB",
+      alternateLocale: locale === "de" ? "en_GB" : "de_DE",
+      type: "website",
+    },
+  };
+}
 
 export default function Home() {
   const t  = useTranslations("home");
@@ -8,6 +41,18 @@ export default function Home() {
   const phases  = t.raw("phases")  as Array<{ num: string; title: string; text: string }>;
   const steps   = t.raw("process.steps") as Array<{ title: string; text: string }>;
   const faqs    = t.raw("faq.items") as Array<{ q: string; a: string }>;
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(({ q, a }) => ({
+      "@type": "Question",
+      "name": q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": a,
+      },
+    })),
+  };
 
   return (
     <>

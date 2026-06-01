@@ -4,9 +4,35 @@ import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("ueber-uns.meta");
-  return { title: t("title"), description: t("description") };
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "ueber-uns.meta" });
+  const BASE_URL = "https://bewerberbruecke.com";
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: {
+      canonical: `${BASE_URL}/${locale}`,
+      languages: {
+        de: `${BASE_URL}/de`,
+        en: `${BASE_URL}/en`,
+      },
+    },
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      url: `${BASE_URL}/${locale}`,
+      siteName: "Bewerberbrücke",
+      locale: locale === "de" ? "de_DE" : "en_GB",
+      alternateLocale: locale === "de" ? "en_GB" : "de_DE",
+      type: "website",
+    },
+  };
 }
 
 type TeamMember = {
