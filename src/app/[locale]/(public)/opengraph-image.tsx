@@ -27,6 +27,21 @@ export default function OgImage() {
         <div style={{ color: "#a0a0b0", fontSize: 28 }}>
           bewerberbruecke.com
         </div>
+        <div
+          style={{
+            marginTop: 8,
+            background: "#c8a96e",
+            color: "#1a1a2e",
+            padding: "12px 28px",
+            borderRadius: 6,
+            fontSize: 20,
+            fontWeight: 700,
+            display: "inline-block",
+            alignSelf: "flex-start",
+          }}
+        >
+          Jetzt Erstgespräch anfragen →
+        </div>
       </div>
     ),
     size
