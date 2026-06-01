@@ -36,7 +36,7 @@ export default function OgImage() {
             borderRadius: 6,
             fontSize: 20,
             fontWeight: 700,
-            display: "inline-block",
+            display: "flex",
             alignSelf: "flex-start",
           }}
         >
