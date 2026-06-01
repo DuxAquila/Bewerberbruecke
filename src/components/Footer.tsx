@@ -18,27 +18,19 @@ export default function Footer({ locale }: FooterProps) {
   ];
 
   return (
-    <footer style={{ background: "var(--primary)", color: "var(--accent-light)", marginTop: "6rem" }}>
-      <div className="container auto-grid" style={{ padding: "4rem 2rem 2rem", gap: "3rem" }}>
+    <footer className="footer-root">
+      <div className="container auto-grid footer-grid">
 
         {/* Marke */}
         <div>
-          <div className="font-serif" style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--white)", marginBottom: "0.5rem" }}>
-            Bewerberbrücke
-          </div>
-          <div className="text-label" style={{ fontSize: "0.7rem", marginBottom: "1.25rem" }}>
-            {t("tagline")}
-          </div>
-          <p style={{ fontSize: "0.88rem", lineHeight: 1.7, color: "rgba(232,217,188,0.75)" }}>
-            {t("description")}
-          </p>
+          <div className="font-serif footer-brand-name">Bewerberbrücke</div>
+          <div className="text-label footer-tagline">{t("tagline")}</div>
+          <p className="footer-description">{t("description")}</p>
         </div>
 
         {/* Navigation */}
         <div>
-          <div className="text-label" style={{ fontSize: "0.75rem", marginBottom: "1.25rem" }}>
-            {t("navHeading")}
-          </div>
+          <div className="text-label footer-heading">{t("navHeading")}</div>
           {navLinks.map(({ href, label }) => (
             <Link key={href} href={href} className="footer-link">{label}</Link>
           ))}
@@ -46,18 +38,14 @@ export default function Footer({ locale }: FooterProps) {
 
         {/* Kontakt */}
         <div>
-          <div className="text-label" style={{ fontSize: "0.75rem", marginBottom: "1.25rem" }}>
-            {t("contactHeading")}
-          </div>
-          <p style={{ fontSize: "0.9rem", color: "rgba(232,217,188,0.75)", marginBottom: "0.6rem" }}>{t("email")}</p>
-          <p style={{ fontSize: "0.9rem", color: "rgba(232,217,188,0.75)", marginBottom: "0.6rem" }}>{t("phone")}</p>
-          <p style={{ fontSize: "0.85rem", color: "rgba(232,217,188,0.5)", marginTop: "1rem", whiteSpace: "pre-line" }}>
-            {t("address")}
-          </p>
+          <div className="text-label footer-heading">{t("contactHeading")}</div>
+          <p className="footer-contact-text">{t("email")}</p>
+          <p className="footer-contact-text">{t("phone")}</p>
+          <p className="footer-address">{t("address")}</p>
         </div>
       </div>
 
-      <div style={{ borderTop: "1px solid rgba(232,217,188,0.12)", padding: "1.25rem 2rem", textAlign: "center", fontSize: "0.8rem", color: "rgba(232,217,188,0.4)" }}>
+      <div className="footer-bottom">
         © {new Date().getFullYear()} {t("copyright")}
       </div>
     </footer>

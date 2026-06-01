@@ -30,9 +30,9 @@
     "members": [
       {
         "name": "Finn Loreth",
-        "role": "Gründer & Geschäftsführer",
+        "role": "Gründer",
         "quote": "Wirkung entsteht nicht durch möglichst viele Maßnahmen, sondern durch Klarheit und Struktur. Genau deshalb geht es für mich um Systeme, die im Alltag den Unterschied machen.",
-        "image": "/images/team/finn-loreth.jpg",
+        "image": "/images/team/finn-loreth.png",
         "socials": {
           "facebook": "https://www.facebook.com/profile.php?id=61576245745548",
           "instagram": "https://www.instagram.com/bewerberbruecke/",
@@ -42,9 +42,9 @@
       },
       {
         "name": "Philipp Gornert",
-        "role": "",
+        "role": "Kundenbetreuung & Projektleitung",
         "quote": "",
-        "image": "/images/team/philipp-gornert.jpg",
+        "image": "/images/team/philipp-gornert.png",
         "socials": {}
       }
     ]

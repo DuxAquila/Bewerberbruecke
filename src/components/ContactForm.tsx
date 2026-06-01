@@ -39,24 +39,22 @@ export default function ContactForm() {
   if (status === "success") {
     return (
       <div className="info-box text-center">
-        <div style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>✓</div>
-        <h3 style={{ fontSize: "1.3rem", marginBottom: "0.75rem" }}>{t("successTitle")}</h3>
-        <p className="text-muted" style={{ lineHeight: 1.75 }}>{t("successText")}</p>
+        <div className="form-success-icon">✓</div>
+        <h3 className="form-success-title">{t("successTitle")}</h3>
+        <p className="text-muted form-success-text">{t("successText")}</p>
       </div>
     );
   }
 
   return (
     <div className="contact-form-card">
-      <h2 style={{ fontSize: "1.2rem", marginBottom: "2rem" }}>Ihre Anfrage</h2>
+      <h2 className="form-card-title">Ihre Anfrage</h2>
 
       {status === "error" && (
-        <div style={{ background: "#fff5f5", border: "1px solid #fecaca", borderRadius: "var(--radius-md)", padding: "0.85rem 1rem", marginBottom: "1.5rem", color: "#b91c1c", fontSize: "0.88rem" }}>
-          {t("errorText")}
-        </div>
+        <div className="form-error">{t("errorText")}</div>
       )}
 
-      <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
+      <div className="form-stack">
 
         {/* Name + Unternehmen */}
         <div className="form-name-grid">
@@ -67,8 +65,6 @@ export default function ContactForm() {
               onChange={set("name")}
               placeholder={t("namePlaceholder")}
               className="form-input"
-              onFocus={e => e.target.style.borderColor = "var(--accent)"}
-              onBlur={e => e.target.style.borderColor = "var(--border)"}
               required
             />
           </div>
@@ -79,8 +75,6 @@ export default function ContactForm() {
               onChange={set("company")}
               placeholder={t("companyPlaceholder")}
               className="form-input"
-              onFocus={e => e.target.style.borderColor = "var(--accent)"}
-              onBlur={e => e.target.style.borderColor = "var(--border)"}
             />
           </div>
         </div>
@@ -94,8 +88,6 @@ export default function ContactForm() {
             onChange={set("email")}
             placeholder={t("emailPlaceholder")}
             className="form-input"
-            onFocus={e => e.target.style.borderColor = "var(--accent)"}
-            onBlur={e => e.target.style.borderColor = "var(--border)"}
             required
           />
         </div>
@@ -108,10 +100,7 @@ export default function ContactForm() {
             onChange={set("message")}
             rows={5}
             placeholder={t("messagePlaceholder")}
-            className="form-input"
-            style={{ resize: "vertical", lineHeight: 1.7 }}
-            onFocus={e => e.target.style.borderColor = "var(--accent)"}
-            onBlur={e => e.target.style.borderColor = "var(--border)"}
+            className="form-input form-textarea"
           />
         </div>
 
@@ -126,9 +115,9 @@ export default function ContactForm() {
         </button>
 
         {/* Datenschutz */}
-        <p className="text-muted" style={{ fontSize: "0.78rem", lineHeight: 1.7 }}>
+        <p className="text-muted form-privacy">
           {t("privacy")}{" "}
-          <a href={`/${locale}/impressum`} style={{ color: "var(--accent)" }}>
+          <a href={`/${locale}/impressum`} className="form-privacy-link">
             Datenschutzerklärung
           </a>.
         </p>

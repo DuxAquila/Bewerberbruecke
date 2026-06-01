@@ -35,48 +35,40 @@ export default function Referenzen() {
       <section className="section section--dark">
         <div className="container">
           <p className="text-label mb-sm">{t("hero.label")}</p>
-          <h1 style={{ fontSize: "clamp(2rem,5vw,3rem)", color: "var(--white)", maxWidth: 600 }}>
-            {t("hero.title")}
-          </h1>
-          <p style={{ color: "rgba(255,255,255,0.6)", marginTop: "1rem", maxWidth: 600, lineHeight: 1.75 }}>
-            {t("hero.subtitle")}
-          </p>
+          <h1 className="page-hero-title">{t("hero.title")}</h1>
+          <p className="page-hero-subtitle">{t("hero.subtitle")}</p>
         </div>
       </section>
 
       {/* Intro */}
       <section className="section section--light">
         <div className="container max-w-md text-center">
-          <p className="text-muted" style={{ fontSize: "1rem", lineHeight: 1.8 }}>{t("intro")}</p>
+          <p className="text-muted intro-text">{t("intro")}</p>
         </div>
       </section>
 
       {/* Featured Case – Haus Hohensolms */}
       <section className="section">
         <div className="container">
-          <div style={{ border: "1px solid var(--border)", borderRadius: "var(--radius-lg)", overflow: "hidden" }}>
+          <div className="featured-card">
 
             {/* Header */}
-            <div style={{ background: "var(--primary)", padding: "2.5rem" }}>
+            <div className="featured-card-header">
               <div className="flex-between flex-wrap gap-md">
                 <div>
-                  <div style={{ background: "rgba(200,169,110,0.2)", color: "var(--accent)", fontSize: "0.7rem", letterSpacing: "0.1em", padding: "0.25rem 0.7rem", borderRadius: "var(--radius-sm)", fontWeight: 600, display: "inline-block", marginBottom: "1rem" }}>
-                    {featured.tag}
-                  </div>
-                  <div style={{ fontSize: "0.85rem", color: "rgba(232,217,188,0.6)", marginBottom: "0.4rem" }}>{featured.sector}</div>
-                  <h2 className="font-serif" style={{ fontSize: "clamp(1.5rem,3vw,2.2rem)", color: "var(--white)", marginBottom: "0.75rem" }}>
-                    {featured.client}
-                  </h2>
+                  <div className="featured-tag">{featured.tag}</div>
+                  <div className="featured-sector">{featured.sector}</div>
+                  <h2 className="font-serif featured-client">{featured.client}</h2>
                 </div>
-                <div style={{ background: "rgba(200,169,110,0.15)", border: "1px solid rgba(200,169,110,0.3)", borderRadius: "var(--radius-lg)", padding: "1.25rem 2rem", textAlign: "center" }}>
-                  <div className="font-serif" style={{ fontSize: "2.5rem", fontWeight: 700, color: "var(--accent)", lineHeight: 1 }}>138</div>
-                  <div style={{ fontSize: "0.8rem", color: "rgba(232,217,188,0.7)", marginTop: "0.25rem" }}>Bewerbungen in 12 Monaten</div>
+                <div className="featured-stat">
+                  <div className="font-serif featured-stat-number">138</div>
+                  <div className="featured-stat-label">Bewerbungen in 12 Monaten</div>
                 </div>
               </div>
             </div>
 
             {/* Body */}
-            <div style={{ padding: "2.5rem", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px,1fr))", gap: "2rem" }}>
+            <div className="featured-card-body">
               {[
                 { label: labels.situation, text: featured.situation },
                 { label: labels.challenge, text: featured.challenge },
@@ -84,18 +76,16 @@ export default function Referenzen() {
                 { label: labels.result,    text: featured.result_detail },
               ].filter(s => s.text).map(({ label, text }) => (
                 <div key={label}>
-                  <div className="text-label" style={{ fontSize: "0.72rem", marginBottom: "0.6rem" }}>{label}</div>
-                  <p className="text-muted" style={{ fontSize: "0.92rem", lineHeight: 1.75 }}>{text}</p>
+                  <div className="text-label featured-card-section-label">{label}</div>
+                  <p className="text-muted featured-card-section-text">{text}</p>
                 </div>
               ))}
             </div>
 
             {/* Insight + Video */}
             {featured.insight && (
-              <div style={{ background: "var(--section-bg)", borderTop: "1px solid var(--border)", padding: "2rem 2.5rem", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "1.5rem" }}>
-                <p style={{ color: "var(--primary)", fontSize: "0.95rem", lineHeight: 1.7, maxWidth: 600, fontWeight: 500 }}>
-                  {featured.insight}
-                </p>
+              <div className="featured-insight">
+                <p className="featured-insight-text">{featured.insight}</p>
                 {featured.videoUrl && (
                   <a href={featured.videoUrl} target="_blank" rel="noopener noreferrer" className="btn btn-dark">
                     {labels.video} ↗
@@ -114,16 +104,14 @@ export default function Referenzen() {
             <div className="auto-grid">
               {rest.map((c, i) => (
                 <div key={i} className="case-card">
-                  <div style={{ background: "var(--primary)", padding: "2rem", position: "relative" }}>
-                    <div style={{ position: "absolute", top: "1rem", right: "1rem", background: "rgba(200,169,110,0.2)", color: "var(--accent)", fontSize: "0.7rem", letterSpacing: "0.1em", padding: "0.25rem 0.7rem", borderRadius: "var(--radius-sm)", fontWeight: 600 }}>
-                      {c.tag}
-                    </div>
-                    <div style={{ fontSize: "0.8rem", color: "rgba(232,217,188,0.6)", marginBottom: "0.5rem" }}>{c.sector}</div>
-                    <div className="font-serif" style={{ fontSize: "1.2rem", color: "var(--white)", fontWeight: 600 }}>{c.client}</div>
+                  <div className="case-card-header">
+                    <div className="case-card-tag">{c.tag}</div>
+                    <div className="case-card-sector">{c.sector}</div>
+                    <div className="font-serif case-card-client">{c.client}</div>
                   </div>
-                  <div style={{ padding: "1.75rem" }}>
-                    <div className="font-serif" style={{ fontSize: "1rem", fontWeight: 600, color: "var(--accent)", marginBottom: "1rem" }}>{c.result}</div>
-                    <p className="text-muted" style={{ fontSize: "0.9rem", lineHeight: 1.75 }}>{c.result_detail}</p>
+                  <div className="case-card-body">
+                    <div className="font-serif case-card-result">{c.result}</div>
+                    <p className="text-muted case-card-detail">{c.result_detail}</p>
                   </div>
                 </div>
               ))}
@@ -136,7 +124,7 @@ export default function Referenzen() {
       <section className="section">
         <div className="container">
           <div className="info-box text-center">
-            <h2 style={{ fontSize: "1.6rem", marginBottom: "1rem" }}>{t("cta.title")}</h2>
+            <h2 className="section-title--sm">{t("cta.title")}</h2>
             <p className="text-muted mb-md">{t("cta.text")}</p>
             <Link href="/kontakt" className="btn btn-dark">{tc("wachstumsanalyse")}</Link>
           </div>
