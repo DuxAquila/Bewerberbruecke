@@ -64,11 +64,11 @@
 
 .nav-root {
   background:    var(--white);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 5px solid var(--accent);
   position:      sticky;
   top:           0;
   z-index:       100;
-  box-shadow:    0 1px 12px rgba(0, 0, 0, 0.06);
+  box-shadow:    0 2px 16px rgba(0, 0, 0, 0.12);
 }
 
 .nav-inner {
@@ -77,9 +77,14 @@
 
 .nav-logo {
   text-decoration: none;
-  display:         flex;
-  flex-direction:  column;
-  line-height:     1.1;
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo-text {
+  display:        flex;
+  flex-direction: column;
+  line-height:    1.1;
 }
 
 .nav-logo-name {
@@ -87,6 +92,11 @@
   font-weight:    700;
   color:          var(--primary);
   letter-spacing: -0.01em;
+}
+
+.nav-logo-img {
+  height: 170px;
+  width: auto;
 }
 
 .nav-logo-sub {
@@ -195,6 +205,9 @@
   }
   .burger {
     display: block !important;
+  }
+  .nav-logo-img {
+    height: 80px;
   }
 }
 

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 interface NavbarProps {
   locale: string;
@@ -38,8 +39,18 @@ export default function Navbar({ locale }: NavbarProps) {
 
           {/* Logo */}
           <Link href={`/${locale}`} className="nav-logo">
-            <span className="font-serif nav-logo-name">Bewerberbrücke</span>
-            <span className="text-label nav-logo-sub">Social Recruiting</span>
+            <Image
+              src="/images/navbarLogo.png"
+              alt="Bewerberbrücke Logo"
+              width={170}
+              height={170}
+              className="nav-logo-img"
+              priority
+            />
+            <div className="nav-logo-text">
+              <span className="font-serif nav-logo-name">Bewerberbrücke</span>
+              <span className="text-label nav-logo-sub">Social Recruiting</span>
+            </div>
           </Link>
 
           {/* Desktop Nav */}
