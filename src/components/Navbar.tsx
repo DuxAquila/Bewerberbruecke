@@ -49,7 +49,6 @@ export default function Navbar({ locale }: NavbarProps) {
             />
             <div className="nav-logo-text">
               <span className="font-serif nav-logo-name">Bewerberbrücke</span>
-              <span className="text-label nav-logo-sub">Social Recruiting</span>
             </div>
           </Link>
 
