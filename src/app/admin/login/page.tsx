@@ -61,7 +61,7 @@ export default function LoginPage() {
               className="admin-field-input"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="finn@bewerberbruecke.com"
+              placeholder="user@example.tld"
             />
           </div>
 
