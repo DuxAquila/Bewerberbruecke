@@ -22,6 +22,7 @@
   "buttons": {
     "erstgespraech": "Request intro call",
     "wachstumsanalyse": "Request growth analysis",
-    "fallstudie": "View case study"
+    "fallstudie": "View case study",
+    "kontakt": "Contact us"
   }
 }

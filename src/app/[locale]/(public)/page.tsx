@@ -134,7 +134,7 @@ export default function Home() {
             <p className="cta-text">{t("ctaBanner.text")}</p>
           </div>
           <Link href="/kontakt" className="btn btn-dark btn-nowrap">
-            {tc("erstgespraech")}
+            {tc("kontakt")}
           </Link>
         </div>
       </section>
