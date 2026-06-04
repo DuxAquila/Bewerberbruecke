@@ -10,10 +10,6 @@ export default function Footer({ locale }: FooterProps) {
   const tn = useTranslations("nav");
 
   const navLinks = [
-    { href: `/${locale}`,            label: tn("home") },
-    { href: `/${locale}/referenzen`, label: tn("referenzen") },
-    { href: `/${locale}/ueber-uns`,  label: tn("ueberUns") },
-    { href: `/${locale}/kontakt`,    label: tn("kontakt") },
     { href: `/${locale}/impressum`,  label: tn("impressum") },
   ];
 
