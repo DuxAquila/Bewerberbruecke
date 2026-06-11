@@ -1,30 +1,56 @@
 {
   "meta": {
-    "title": "Legal notice – Bewerberbrücke",
-    "description": "Legal notice and privacy information for Bewerberbrücke e.K."
+    "title": "Legal Notice – Bewerberbrücke",
+    "description": "Legal notice and data protection information of Bewerberbrücke e.K."
   },
-  "title": "Legal notice",
-  "subtitle": "Information pursuant to § 5 TMG",
+  "title": "Legal Notice",
+  "subtitle": "Information in accordance with § 5 TMG (German Telemedia Act)",
   "sections": [
     {
-      "title": "Provider",
-      "lines": ["Bewerberbrücke e.K.", "Fronhofstraße 18", "35440 Linden", "Germany"]
+      "title": "Service Provider",
+      "lines": [
+        "Bewerberbrücke e.K.",
+        "Fronhofstraße 18",
+        "35440 Linden",
+        "Germany",
+        "\n ",
+        "Commercial Register: HRA 5561",
+        "Registry Court: Amtsgericht Gießen (Local Court Gießen)"
+      ]
     },
     {
       "title": "Contact",
-      "lines": ["Phone: 06403 / 9179483", "Email: info@bewerberbruecke.com"]
+      "lines": [
+        "Phone: +49 6403 9179483",
+        "E-Mail: info@bewerberbruecke.com"
+      ]
     },
     {
-      "title": "Responsible for content (§ 55 para. 2 RStV)",
-      "lines": ["Bewerberbrücke e.K.", "Fronhofstraße 18", "35440 Linden"]
+      "title": "VAT Identification Number",
+      "lines": [
+        "VAT identification number in accordance with § 27a of the German Value Added Tax Act (UStG):",
+        "DE452299775"
+      ]
+    },
+    {
+      "title": "Responsible for Content (§ 55 Para. 2 RStV)",
+      "lines": [
+        "Bewerberbrücke e.K.",
+        "Fronhofstraße 18",
+        "35440 Linden"
+      ]
     },
     {
       "title": "Disclaimer",
-      "lines": ["The contents of this website have been prepared with the greatest possible care. However, we cannot guarantee the accuracy, completeness or timeliness of the content. As a service provider we are responsible for our own content on these pages in accordance with general laws pursuant to § 7 para. 1 TMG."]
+      "lines": [
+        "The contents of this website have been compiled with the utmost care. However, we cannot guarantee the accuracy, completeness, or up-to-dateness of the content. As a service provider, we are responsible for our own content on these pages in accordance with general law pursuant to § 7 Para. 1 TMG (German Telemedia Act)."
+      ]
     },
     {
-      "title": "Privacy",
-      "lines": ["The use of our website is generally possible without providing personal data. As far as personal data (e.g. name, address or email addresses) is collected on our pages, this is always done on a voluntary basis as far as possible. This data will not be passed on to third parties without your express consent."]
+      "title": "Data Protection",
+      "lines": [
+        "The use of our website is generally possible without providing personal data. Where personal data (such as name, address, or e-mail addresses) is collected on our pages, this is done, wherever possible, on a voluntary basis. This data will not be passed on to third parties without your explicit consent."
+      ]
     }
   ]
 }

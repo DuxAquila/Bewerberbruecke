@@ -8,11 +8,15 @@
   "sections": [
     {
       "title": "Anbieter",
-      "lines": ["Bewerberbrücke e.K.", "Fronhofstraße 18", "35440 Linden", "Deutschland"]
+      "lines": ["Bewerberbrücke e.K.", "Fronhofstraße 18", "35440 Linden", "Deutschland", "\n ", "Handelsregister: HRA 5561", "Registergericht: Amtsgericht Gießen"]
     },
     {
       "title": "Kontakt",
       "lines": ["Telefon: 06403 / 9179483", "E-Mail: info@bewerberbruecke.com"]
+    },
+    {
+      "title": "Umsatzsteuer-ID",
+      "lines": ["Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:", "DE452299775"]
     },
     {
       "title": "Verantwortlich für den Inhalt (§ 55 Abs. 2 RStV)",
