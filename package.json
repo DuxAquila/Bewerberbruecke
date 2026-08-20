@@ -17,7 +17,8 @@
     "flatted": ">=3.4.1",
     "sharp": "^0.35.3",
     "effect": ">=3.20.0",
-    "brace-expansion": "^5.0.8"
+    "brace-expansion": "^5.0.8",
+    "deepmerge-ts": "^8.0.1"
   },
   "dependencies": {
     "@prisma/adapter-mariadb": "^7.6.0",
